@@ -31,3 +31,7 @@ cargo build
 ```
 cargo run
 ```
+クレートを更新して新バージョンを取得する
+```
+cargo update
+```
