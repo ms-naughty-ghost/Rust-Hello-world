@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  api:
+    container_name: api
+    build:
+      target: ${ENV:-develop}
+      context: ./rest-api
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./rest-api:/api
+    tty: true
+
+  db:
+    container_name: mysql
+    image: postgres:15.4
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: sample
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 18080:8080
+
+volumes:
+  db-data:
