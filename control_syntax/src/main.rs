@@ -95,25 +95,25 @@ fn main() {
     // match文
     #[derive(Debug)] // デバッグ用に文字列を表示するために必要
     enum Hololive {
-        USADA_PEKORA,
-        SAKURA_MIKO,
-        SHIRAKAMI_FUBUKI,
-        NAKIRI_AYAME,
-        MURASAKI_SHION,
-        MINATO_AQUA,
-        HOSHIMACHI_SUISEI,
-        YAGOO,
+        UsadaPekora,
+        SakuraMiko,
+        ShirakamiFubuki,
+        NakiriAyame,
+        MurasakiShion,
+        MinatoAqua,
+        HoshimachiSuisei,
+        Yagoo,
     }
-    let talent = Hololive::USADA_PEKORA;
+    let talent = Hololive::UsadaPekora;
     let name = match talent {
-        Hololive::USADA_PEKORA => "Usada Pekora",
-        Hololive::SAKURA_MIKO => "Sakura Miko",
-        Hololive::SHIRAKAMI_FUBUKI => "Shirakami Fubuki",
-        Hololive::NAKIRI_AYAME => "Nakiri Ayame",
-        Hololive::MURASAKI_SHION => "Murasaki Shion",
-        Hololive::MINATO_AQUA => "Minato Aqua",
-        Hololive::HOSHIMACHI_SUISEI => "Hoshimachi Suisei",
-        Hololive::YAGOO => "Yagoo",
+        Hololive::UsadaPekora => "Usada Pekora",
+        Hololive::SakuraMiko => "Sakura Miko",
+        Hololive::ShirakamiFubuki => "Shirakami Fubuki",
+        Hololive::NakiriAyame => "Nakiri Ayame",
+        Hololive::MurasakiShion => "Murasaki Shion",
+        Hololive::MinatoAqua => "Minato Aqua",
+        Hololive::HoshimachiSuisei => "Hoshimachi Suisei",
+        Hololive::Yagoo => "Yagoo",
     };
     println!("talent: {}", name);
 }
